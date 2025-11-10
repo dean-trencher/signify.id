@@ -3,7 +3,7 @@ import IDCard from "./IDCard";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-32">
       <div className="absolute inset-0 gradient-radial" />
       
       <div className="container mx-auto px-6 lg:px-12 py-24 relative z-10">

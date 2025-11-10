@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Github, Star, Shield, Info } from "lucide-react";
 import { WalletButton } from "./WalletButton";
 
 const Navigation = () => {
@@ -24,25 +24,28 @@ const Navigation = () => {
           {/* Divider */}
           <div className="h-8 w-px bg-border/40" />
           
-          {/* Navigation links */}
-          <div className="flex items-center gap-2 px-3">
+          {/* Navigation links with icons */}
+          <div className="flex items-center gap-1 px-2">
             <a 
               href="#features" 
-              className="px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50"
+              className="p-3 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
+              aria-label="Features"
             >
-              Features
+              <Star className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
             <a 
               href="#scenarios" 
-              className="px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/80"
+              className="p-3 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
+              aria-label="Use Cases"
             >
-              Use Cases
+              <Info className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
             <a 
               href="#security" 
-              className="px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50"
+              className="p-3 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
+              aria-label="Security"
             >
-              Security
+              <Shield className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
           </div>
 

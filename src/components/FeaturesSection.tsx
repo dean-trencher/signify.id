@@ -35,17 +35,17 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="py-24 px-6 lg:px-12 relative">
+    <section id="features" className="py-32 px-6 lg:px-12 relative">
       <div className="container mx-auto max-w-7xl">
-        <div className="mb-16 max-w-xl">
-          <h2 className="text-3xl lg:text-5xl font-semibold mb-4 leading-tight">
+        <div className="mb-20 max-w-2xl">
+          <h2 className="text-4xl lg:text-6xl font-semibold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
               Why Choose
             </span>
             <br />
             <span className="text-foreground">Signify.ai</span>
           </h2>
-          <p className="text-base text-muted-foreground font-light">
+          <p className="text-lg text-muted-foreground font-light">
             Built on Solana's cutting-edge blockchain for unparalleled security
           </p>
         </div>
