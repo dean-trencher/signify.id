@@ -45,7 +45,7 @@ const Navigation = () => {
             </a>
             
             <div className="scale-90">
-              <WalletButton className="px-[20px]" />
+              <WalletButton />
             </div>
             
             <Button size="sm" className="bg-gradient-to-r from-solana-purple to-solana-green hover:opacity-90 transition-all hover:scale-105 text-sm font-semibold px-5 h-9 rounded-full shadow-lg">
