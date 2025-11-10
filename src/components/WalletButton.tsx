@@ -24,7 +24,7 @@ export const WalletButton = ({
     }
   }, []);
   return <div className="wallet-adapter-button-trigger">
-      <WalletMultiButton className="px-[20px] mx-0">
+      <WalletMultiButton className="!bg-white !text-solana-purple hover:!bg-white/90 !font-semibold !px-8 !py-3 !rounded-full !transition-all !border-0">
         Wallet
       </WalletMultiButton>
     </div>;
