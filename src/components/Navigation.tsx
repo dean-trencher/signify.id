@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Star, Shield, Info } from "lucide-react";
 import { WalletButton } from "./WalletButton";
+import signifyLogo from "@/assets/signify-logo.png";
 const Navigation = () => {
   return <nav className="fixed top-16 left-1/2 -translate-x-1/2 z-50 animate-fade-in">
       <div className="relative">
@@ -11,9 +12,7 @@ const Navigation = () => {
         <div className="relative flex items-center justify-between gap-3 px-4 py-2 rounded-full border border-border/40 bg-background/80 backdrop-blur-2xl shadow-xl">
           {/* Logo */}
           <div className="flex items-center gap-2 px-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-solana-purple to-solana-green">
-              <span className="text-sm font-semibold">S</span>
-            </div>
+            <img src={signifyLogo} alt="Signify.ai" className="w-8 h-8 object-contain" />
             <span className="text-sm font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
               Signify.ai
             </span>
