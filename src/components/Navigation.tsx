@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Menu, Home, Star, Shield, Info } from "lucide-react";
+import { Menu, Home, Star, Shield, Info, Github } from "lucide-react";
+import { WalletButton } from "./WalletButton";
 
 const Navigation = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <nav className={`fixed left-6 top-6 z-50 flex flex-col gap-6 rounded-2xl border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg transition-all duration-300 ${isExpanded ? 'p-6 w-48' : 'p-4 w-16'}`}>
-      <button 
+    <nav className={`fixed left-6 top-20 z-50 flex flex-col gap-6 rounded-2xl border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg transition-all duration-300 ${isExpanded ? 'p-6 w-48' : 'p-4 w-16'}`}>
+      <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-solana-purple to-solana-green hover:opacity-90 transition-opacity"
       >
@@ -41,6 +42,19 @@ const Navigation = () => {
             <a href="#about" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light flex items-center gap-2">
               <Info className="w-4 h-4" />
               About Us
+            </a>
+          </div>
+
+          <div className="pt-4 border-t border-border/40 space-y-3">
+            <WalletButton />
+            <a 
+              href="https://github.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Github className="w-4 h-4" />
+              <span>GitHub</span>
             </a>
           </div>
 
