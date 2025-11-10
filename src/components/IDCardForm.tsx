@@ -45,8 +45,37 @@ export const IDCardForm = ({ open, onOpenChange, walletAddress }: IDCardFormProp
 
       if (error) throw error;
 
-      toast.success('ID Card generated successfully!');
       setShowPreview(true);
+
+      // Send email with card image
+      setTimeout(async () => {
+        try {
+          const cardElement = document.getElementById('id-card-preview');
+          if (cardElement && formData.email) {
+            const canvas = await html2canvas(cardElement, {
+              scale: 2,
+              backgroundColor: null,
+            });
+            const imageBase64 = canvas.toDataURL("image/png");
+
+            await supabase.functions.invoke("send-id-card-email", {
+              body: {
+                to: formData.email,
+                fullName: formData.full_name,
+                walletAddress,
+                cardImageBase64: imageBase64,
+              },
+            });
+
+            toast.success('ID Card generated and sent to your email!');
+          } else {
+            toast.success('ID Card generated successfully!');
+          }
+        } catch (emailError) {
+          console.error("Error sending email:", emailError);
+          toast.success('ID Card generated! (Email delivery failed)');
+        }
+      }, 500);
     } catch (error) {
       console.error('Error creating ID card:', error);
       toast.error('Failed to generate ID card');
