@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import IDCard from "./IDCard";
 import NetworkBackground from "./NetworkBackground";
 const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center overflow-hidden pt-32">
+  return <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       <div className="absolute inset-0 gradient-radial" />
       <NetworkBackground />
       
