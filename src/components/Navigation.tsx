@@ -12,7 +12,7 @@ const Navigation = () => {
         <div className="relative flex items-center justify-between gap-3 px-4 py-2 rounded-full border border-border/40 bg-background/80 backdrop-blur-2xl shadow-xl">
           {/* Logo */}
           <div className="flex items-center gap-2 px-2">
-            <img src={signifyLogo} alt="Signify.ai" className="w-[60px] h-[60px] object-contain" />
+            <img src={signifyLogo} alt="Signify.ai" className="w-[65px] h-[65px] object-contain" />
             
           </div>
           
