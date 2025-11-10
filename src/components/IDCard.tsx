@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Barcode from "react-barcode";
+import { QRCodeSVG } from "qrcode.react";
 
 interface IDCardProps {
   holderName: string;
@@ -22,7 +22,7 @@ const IDCard = ({ holderName, walletAddress, variant = "purple", delay = 0 }: ID
       transition={{ duration: 0.6, delay }}
       className="relative group"
     >
-      <div className={`relative w-[340px] h-[214px] rounded-2xl bg-gradient-to-br ${variantStyles[variant]} p-5 shadow-2xl backdrop-blur-xl border border-white/10 overflow-hidden transition-transform duration-300 group-hover:scale-105`}>
+      <div className={`relative w-[340px] h-[214px] rounded-2xl bg-gradient-to-br ${variantStyles[variant]} p-4 shadow-2xl backdrop-blur-xl border border-white/10 overflow-hidden transition-transform duration-300 group-hover:scale-105`}>
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -32,44 +32,48 @@ const IDCard = ({ holderName, walletAddress, variant = "purple", delay = 0 }: ID
         </div>
         
         {/* Logo */}
-        <div className="relative flex items-center justify-between mb-4">
+        <div className="relative flex items-center justify-between mb-3">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
-              <span className="text-sm font-bold">S</span>
+            <div className="w-7 h-7 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+              <span className="text-xs font-bold">S</span>
             </div>
-            <span className="text-sm font-bold">SIGNIFY.AI</span>
+            <span className="text-xs font-bold">SIGNIFY.AI</span>
           </div>
-          <div className="text-xs opacity-70">SOLANA ID</div>
+          <div className="text-[10px] opacity-70">SOLANA ID</div>
         </div>
 
-        {/* Chip */}
-        <div className="relative w-12 h-10 mb-4">
-          <div className="absolute inset-0 bg-gradient-to-br from-yellow-200 to-yellow-400 rounded-md opacity-80" />
-          <div className="absolute inset-1 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-sm" />
-        </div>
+        {/* Content Container */}
+        <div className="relative flex justify-between items-start gap-3">
+          {/* Left side - Chip and Holder Info */}
+          <div className="flex-1">
+            {/* Chip */}
+            <div className="relative w-10 h-8 mb-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-200 to-yellow-400 rounded-md opacity-80" />
+              <div className="absolute inset-1 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-sm" />
+            </div>
 
-        {/* Contract Address Barcode */}
-        <div className="relative mb-2 flex justify-center bg-white rounded-md p-1">
-          <Barcode 
-            value={walletAddress}
-            width={1.2}
-            height={35}
-            fontSize={8}
-            background="transparent"
-            lineColor="#000000"
-            margin={0}
-            displayValue={false}
-          />
-        </div>
-
-        {/* Holder Info */}
-        <div className="relative flex justify-between items-end mt-3">
-          <div>
-            <p className="text-[9px] opacity-70 mb-0.5 font-light">CARD HOLDER</p>
-            <p className="text-sm font-semibold">{holderName}</p>
-            <p className="text-[8px] opacity-50 mt-0.5 font-mono">{walletAddress.slice(0, 8)}...{walletAddress.slice(-6)}</p>
+            {/* Holder Info */}
+            <div className="space-y-3">
+              <div>
+                <p className="text-[9px] opacity-70 mb-0.5 font-light tracking-wider">CARD HOLDER</p>
+                <p className="text-base font-semibold">{holderName}</p>
+              </div>
+              <div>
+                <p className="text-[9px] opacity-70 mb-0.5 font-light tracking-wider">WALLET ADDRESS</p>
+                <p className="text-[10px] opacity-80 font-mono">{walletAddress.slice(0, 10)}...{walletAddress.slice(-8)}</p>
+              </div>
+            </div>
           </div>
-          <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm" />
+
+          {/* Right side - QR Code */}
+          <div className="bg-white rounded-lg p-2 flex items-center justify-center">
+            <QRCodeSVG 
+              value={walletAddress}
+              size={90}
+              level="H"
+              includeMargin={false}
+            />
+          </div>
         </div>
 
         {/* Solana logo watermark */}
