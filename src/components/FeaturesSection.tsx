@@ -35,29 +35,44 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="py-24 px-6 relative">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-3">
+    <section id="features" className="py-24 px-6 lg:px-12 relative">
+      <div className="container mx-auto max-w-7xl">
+        <div className="mb-16 max-w-xl">
+          <h2 className="text-3xl lg:text-5xl font-semibold mb-4 leading-tight">
             <span className="bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
-              Core Features
+              Why Choose
             </span>
+            <br />
+            <span className="text-foreground">Signify.ai</span>
           </h2>
-          <p className="text-base text-muted-foreground max-w-2xl mx-auto font-light">
-            Built on Solana's cutting-edge blockchain technology for unparalleled security and performance
+          <p className="text-base text-muted-foreground font-light">
+            Built on Solana's cutting-edge blockchain for unparalleled security
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-solana-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-solana-purple/10"
-            >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-solana-purple/20 to-solana-green/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                <feature.icon className="w-5 h-5 text-solana-purple" />
-              </div>
-              <h3 className="text-lg font-medium mb-1.5">{feature.title}</h3>
+        {/* Bento Box Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Large card */}
+          <div className="md:col-span-2 lg:col-span-2 lg:row-span-2 group p-8 rounded-3xl bg-gradient-to-br from-solana-purple/10 to-solana-green/10 border border-border/50 hover:border-solana-purple/50 transition-all duration-300">
+            <Shield className="w-8 h-8 text-solana-purple mb-4" />
+            <h3 className="text-2xl font-medium mb-3">{features[0].title}</h3>
+            <p className="text-sm text-muted-foreground font-light max-w-md">{features[0].description}</p>
+          </div>
+
+          {/* Small cards */}
+          {features.slice(1, 3).map((feature, index) => (
+            <div key={index} className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-solana-purple/50 transition-all duration-300">
+              <feature.icon className="w-6 h-6 text-solana-purple mb-3" />
+              <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground font-light">{feature.description}</p>
+            </div>
+          ))}
+
+          {/* Medium cards */}
+          {features.slice(3).map((feature, index) => (
+            <div key={index} className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-solana-purple/50 transition-all duration-300">
+              <feature.icon className="w-6 h-6 text-solana-purple mb-3" />
+              <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
               <p className="text-sm text-muted-foreground font-light">{feature.description}</p>
             </div>
           ))}

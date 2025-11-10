@@ -29,34 +29,40 @@ const useCases = [
 
 const UseCasesSection = () => {
   return (
-    <section id="scenarios" className="py-24 px-6 relative">
+    <section id="scenarios" className="py-24 px-6 lg:px-12 relative overflow-hidden">
       <div className="absolute inset-0 gradient-radial opacity-50" />
       
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-3">
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-5xl font-semibold mb-4">
             Application Scenarios
           </h2>
-          <p className="text-base text-muted-foreground max-w-2xl mx-auto font-light">
+          <p className="text-base text-muted-foreground font-light">
             Transforming identity verification across industries
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        {/* Diagonal zigzag layout */}
+        <div className="space-y-8">
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-card border border-border/50 p-8 hover:border-solana-purple/50 transition-all duration-300"
+              className={`flex flex-col lg:flex-row gap-8 items-center ${
+                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${useCase.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-              
-              <div className="relative">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${useCase.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <useCase.icon className="w-6 h-6 text-white" />
+              <div className="lg:w-1/2">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${useCase.color} flex items-center justify-center mb-4`}>
+                  <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-lg font-medium mb-2">{useCase.title}</h3>
-                <p className="text-muted-foreground text-sm font-light">{useCase.description}</p>
+                <h3 className="text-2xl font-medium mb-3">{useCase.title}</h3>
+                <p className="text-muted-foreground text-base font-light leading-relaxed">
+                  {useCase.description}
+                </p>
+              </div>
+              
+              <div className="lg:w-1/2">
+                <div className={`h-64 rounded-3xl bg-gradient-to-br ${useCase.color} opacity-20`} />
               </div>
             </div>
           ))}
