@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import IDCard from "./IDCard";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-32">
+  return <section className="relative min-h-screen flex items-center overflow-hidden pt-32">
       <div className="absolute inset-0 gradient-radial" />
       
       <div className="container mx-auto px-6 lg:px-12 py-24 relative z-10">
@@ -36,33 +34,29 @@ const HeroSection = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
-              <div>
-                <div className="text-2xl font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">50K+</div>
-                <div className="text-xs text-muted-foreground mt-1">Active Users</div>
-              </div>
-              <div>
-                <div className="text-2xl font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">200+</div>
-                <div className="text-xs text-muted-foreground mt-1">Countries</div>
-              </div>
-              <div>
-                <div className="text-2xl font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">99.9%</div>
-                <div className="text-xs text-muted-foreground mt-1">Uptime</div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Right Visual */}
           <div className="relative lg:h-[600px] flex items-center justify-center">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 animate-float" style={{ animationDelay: "0s", animationDuration: "8s" }}>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 animate-float" style={{
+                animationDelay: "0s",
+                animationDuration: "8s"
+              }}>
                   <IDCard holderName="Alex Johnson" walletAddress="7xKX...9pQm" variant="purple" />
                 </div>
-                <div className="absolute top-32 right-0 animate-float" style={{ animationDelay: "1s", animationDuration: "9s" }}>
+                <div className="absolute top-32 right-0 animate-float" style={{
+                animationDelay: "1s",
+                animationDuration: "9s"
+              }}>
                   <IDCard holderName="Sarah Chen" walletAddress="9kLm...4rTn" variant="green" />
                 </div>
-                <div className="absolute top-64 left-0 animate-float" style={{ animationDelay: "2s", animationDuration: "7s" }}>
+                <div className="absolute top-64 left-0 animate-float" style={{
+                animationDelay: "2s",
+                animationDuration: "7s"
+              }}>
                   <IDCard holderName="Mike Davis" walletAddress="2bNp...8sXw" variant="dark" />
                 </div>
               </div>
@@ -80,8 +74,6 @@ const HeroSection = () => {
         }
         .animate-float { animation: float 8s ease-in-out infinite; }
       `}</style>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
