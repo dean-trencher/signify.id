@@ -25,22 +25,22 @@ const Navigation = () => {
           <div className="h-8 w-px bg-border/40" />
           
           {/* Navigation links */}
-          <div className="flex items-center gap-1 px-2">
+          <div className="flex items-center gap-2 px-3">
             <a 
               href="#features" 
-              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50"
+              className="px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50"
             >
               Features
             </a>
             <a 
               href="#scenarios" 
-              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/80"
+              className="px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/80"
             >
               Use Cases
             </a>
             <a 
               href="#security" 
-              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50"
+              className="px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50"
             >
               Security
             </a>
