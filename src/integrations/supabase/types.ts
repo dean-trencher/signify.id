@@ -14,13 +14,84 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      id_cards: {
+        Row: {
+          card_color: string
+          created_at: string | null
+          date_of_birth: string | null
+          email: string | null
+          full_name: string
+          id: string
+          wallet_address: string
+        }
+        Insert: {
+          card_color?: string
+          created_at?: string | null
+          date_of_birth?: string | null
+          email?: string | null
+          full_name: string
+          id?: string
+          wallet_address: string
+        }
+        Update: {
+          card_color?: string
+          created_at?: string | null
+          date_of_birth?: string | null
+          email?: string | null
+          full_name?: string
+          id?: string
+          wallet_address?: string
+        }
+        Relationships: []
+      }
+      ticker_config: {
+        Row: {
+          contract_address: string
+          created_at: string | null
+          id: string
+          pump_fun_link: string
+          updated_at: string | null
+        }
+        Insert: {
+          contract_address: string
+          created_at?: string | null
+          id?: string
+          pump_fun_link: string
+          updated_at?: string | null
+        }
+        Update: {
+          contract_address?: string
+          created_at?: string | null
+          id?: string
+          pump_fun_link?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      visitor_sessions: {
+        Row: {
+          id: string
+          last_seen: string | null
+          session_id: string
+        }
+        Insert: {
+          id?: string
+          last_seen?: string | null
+          session_id: string
+        }
+        Update: {
+          id?: string
+          last_seen?: string | null
+          session_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      clean_old_visitor_sessions: { Args: never; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
