@@ -1,68 +1,76 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Menu, Home, Star, Shield, Info, Github } from "lucide-react";
+import { Star, Shield, Info, Github } from "lucide-react";
 import { WalletButton } from "./WalletButton";
 
 const Navigation = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   return (
-    <nav className={`fixed left-6 top-20 z-50 flex flex-col gap-6 rounded-2xl border border-border/40 bg-background/95 backdrop-blur-xl shadow-lg transition-all duration-300 ${isExpanded ? 'p-6 w-48' : 'p-4 w-16'}`}>
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-solana-purple to-solana-green hover:opacity-90 transition-opacity"
-      >
-        <Menu className="w-5 h-5" />
-      </button>
-      
-      {isExpanded && (
-        <>
-          <div className="flex flex-col items-center gap-2">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-solana-purple to-solana-green">
-              <span className="text-xl font-bold">S</span>
+    <nav className="fixed top-14 left-1/2 -translate-x-1/2 z-50 animate-fade-in">
+      <div className="relative">
+        {/* Decorative glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-solana-purple/20 via-solana-green/20 to-solana-purple/20 blur-xl rounded-full" />
+        
+        {/* Main navigation container */}
+        <div className="relative flex items-center gap-2 px-4 py-3 rounded-full border border-border/40 bg-background/80 backdrop-blur-2xl shadow-2xl">
+          {/* Logo */}
+          <div className="flex items-center gap-2 pr-4 border-r border-border/40">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-solana-purple to-solana-green">
+              <span className="text-sm font-bold">S</span>
             </div>
-            <span className="text-sm font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
+            <span className="text-sm font-bold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent hidden sm:block">
               Signify.ai
             </span>
           </div>
           
-          <div className="flex flex-col items-start gap-4">
-            <a href="#features" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light flex items-center gap-2">
-              <Star className="w-4 h-4" />
-              Core Features
+          {/* Navigation links */}
+          <div className="hidden md:flex items-center gap-1">
+            <a 
+              href="#features" 
+              className="group px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent flex items-center gap-2"
+            >
+              <Star className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+              <span>Features</span>
             </a>
-            <a href="#scenarios" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light flex items-center gap-2">
-              <Home className="w-4 h-4" />
-              Use Cases
+            <a 
+              href="#scenarios" 
+              className="group px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent flex items-center gap-2"
+            >
+              <Info className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              <span>Use Cases</span>
             </a>
-            <a href="#security" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light flex items-center gap-2">
-              <Shield className="w-4 h-4" />
-              Security
-            </a>
-            <a href="#about" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light flex items-center gap-2">
-              <Info className="w-4 h-4" />
-              About Us
+            <a 
+              href="#security" 
+              className="group px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent flex items-center gap-2"
+            >
+              <Shield className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              <span>Security</span>
             </a>
           </div>
 
-          <div className="pt-4 border-t border-border/40 space-y-3">
-            <WalletButton />
+          {/* Right side actions */}
+          <div className="flex items-center gap-2 pl-4 border-l border-border/40">
             <a 
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
+              className="p-2 rounded-full hover:bg-accent transition-colors group"
+              aria-label="GitHub"
             >
-              <Github className="w-4 h-4" />
-              <span>GitHub</span>
+              <Github className="w-4 h-4 group-hover:rotate-12 transition-transform" />
             </a>
+            
+            <div className="scale-90">
+              <WalletButton />
+            </div>
+            
+            <Button 
+              size="sm" 
+              className="bg-gradient-to-r from-solana-purple to-solana-green hover:opacity-90 transition-all hover:scale-105 text-xs px-4 rounded-full shadow-lg"
+            >
+              Apply Now
+            </Button>
           </div>
-
-          <Button size="sm" className="bg-gradient-to-r from-solana-purple to-solana-green hover:opacity-90 transition-opacity text-xs px-4 w-full">
-            Apply Now
-          </Button>
-        </>
-      )}
+        </div>
+      </div>
     </nav>
   );
 };

@@ -23,7 +23,7 @@ const Index = () => {
   }, [connected, publicKey]);
 
   return (
-    <div className="min-h-screen bg-background pt-10">
+    <div className="min-h-screen bg-background">
       <TickerDisplay />
       <Navigation />
       <HeroSection />
