@@ -24,7 +24,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background pt-12 flex">
-      <div className="flex-1 pr-80">
+      <div className={`flex-1 ${connected ? 'pr-80' : ''}`}>
         <TickerDisplay />
         <Navigation />
         <HeroSection />
@@ -44,10 +44,12 @@ const Index = () => {
         )}
       </div>
 
-      {/* History Sidebar */}
-      <div className="w-80 border-l border-border bg-card/50 backdrop-blur-sm fixed right-0 top-12 bottom-0 overflow-hidden">
-        <IDCardHistory />
-      </div>
+      {/* History Sidebar - Only show when wallet is connected */}
+      {connected && (
+        <div className="w-80 border-l border-border bg-card/50 backdrop-blur-sm fixed right-0 top-12 bottom-0 overflow-hidden">
+          <IDCardHistory />
+        </div>
+      )}
     </div>
   );
 };
