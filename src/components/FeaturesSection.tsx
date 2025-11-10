@@ -1,41 +1,31 @@
 import { Shield, Zap, Globe, Lock, Fingerprint, Wallet } from "lucide-react";
-
-const features = [
-  {
-    icon: Shield,
-    title: "Blockchain Verified",
-    description: "Every ID card is secured and verified on the Solana blockchain, ensuring authenticity and tamper-proof records.",
-  },
-  {
-    icon: Zap,
-    title: "Instant Verification",
-    description: "Verify identity in milliseconds with Solana's high-speed blockchain technology.",
-  },
-  {
-    icon: Globe,
-    title: "Global Accessibility",
-    description: "Access your digital identity anywhere in the world, anytime you need it.",
-  },
-  {
-    icon: Lock,
-    title: "Privacy First",
-    description: "Your personal data remains encrypted and under your control at all times.",
-  },
-  {
-    icon: Fingerprint,
-    title: "Biometric Integration",
-    description: "Enhanced security with optional biometric authentication features.",
-  },
-  {
-    icon: Wallet,
-    title: "Wallet Integration",
-    description: "Seamlessly connects with your favorite Solana wallets like Phantom and Solflare.",
-  },
-];
-
+const features = [{
+  icon: Shield,
+  title: "Blockchain Verified",
+  description: "Every ID card is secured and verified on the Solana blockchain, ensuring authenticity and tamper-proof records."
+}, {
+  icon: Zap,
+  title: "Instant Verification",
+  description: "Verify identity in milliseconds with Solana's high-speed blockchain technology."
+}, {
+  icon: Globe,
+  title: "Global Accessibility",
+  description: "Access your digital identity anywhere in the world, anytime you need it."
+}, {
+  icon: Lock,
+  title: "Privacy First",
+  description: "Your personal data remains encrypted and under your control at all times."
+}, {
+  icon: Fingerprint,
+  title: "Biometric Integration",
+  description: "Enhanced security with optional biometric authentication features."
+}, {
+  icon: Wallet,
+  title: "Wallet Integration",
+  description: "Seamlessly connects with your favorite Solana wallets like Phantom and Solflare."
+}];
 const FeaturesSection = () => {
-  return (
-    <section id="features" className="py-32 px-6 lg:px-12 relative">
+  return <section id="features" className="py-32 px-6 lg:px-12 relative">
       <div className="container mx-auto max-w-7xl">
         <div className="mb-20 max-w-2xl">
           <h2 className="text-4xl lg:text-6xl font-semibold mb-6 leading-tight">
@@ -60,26 +50,16 @@ const FeaturesSection = () => {
           </div>
 
           {/* Small cards */}
-          {features.slice(1, 3).map((feature, index) => (
-            <div key={index} className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-solana-purple/50 transition-all duration-300">
+          {features.slice(1, 3).map((feature, index) => <div key={index} className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-solana-purple/50 transition-all duration-300">
               <feature.icon className="w-6 h-6 text-solana-purple mb-3" />
               <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
               <p className="text-sm text-muted-foreground font-light">{feature.description}</p>
-            </div>
-          ))}
+            </div>)}
 
           {/* Medium cards */}
-          {features.slice(3).map((feature, index) => (
-            <div key={index} className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-solana-purple/50 transition-all duration-300">
-              <feature.icon className="w-6 h-6 text-solana-purple mb-3" />
-              <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground font-light">{feature.description}</p>
-            </div>
-          ))}
+          {features.slice(3).map((feature, index) => {})}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FeaturesSection;
