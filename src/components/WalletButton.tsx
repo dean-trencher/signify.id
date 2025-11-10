@@ -24,7 +24,7 @@ export const WalletButton = ({
     }
   }, []);
   return <div className="wallet-adapter-button-trigger">
-      <WalletMultiButton className="!bg-gradient-to-r !from-solana-purple !to-solana-green !text-white hover:!opacity-90 !font-semibold !px-6 !py-2.5 !rounded-full !transition-all !border-0 !shadow-lg !shadow-solana-purple/20">
+      <WalletMultiButton className="!bg-transparent !text-foreground !border !border-border/40 hover:!bg-accent/50 !font-semibold !px-6 !py-2.5 !rounded-full !transition-all !shadow-none">
         Connect Wallet
       </WalletMultiButton>
     </div>;
