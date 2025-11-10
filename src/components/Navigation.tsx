@@ -4,13 +4,13 @@ import { WalletButton } from "./WalletButton";
 
 const Navigation = () => {
   return (
-    <nav className="fixed top-16 left-1/2 -translate-x-1/2 z-50 animate-fade-in w-[95vw] max-w-[1400px]">
+    <nav className="fixed top-16 left-1/2 -translate-x-1/2 z-50 animate-fade-in">
       <div className="relative">
         {/* Decorative glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-solana-purple/10 via-solana-green/10 to-solana-purple/10 blur-xl rounded-full" />
         
         {/* Main navigation container */}
-        <div className="relative flex items-center gap-1 px-2 py-2 rounded-full border border-border/40 bg-background/80 backdrop-blur-2xl shadow-xl w-full">
+        <div className="relative flex items-center gap-1 px-2 py-2 rounded-full border border-border/40 bg-background/80 backdrop-blur-2xl shadow-xl">
           {/* Logo */}
           <div className="flex items-center gap-2 px-4">
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-solana-purple to-solana-green">
