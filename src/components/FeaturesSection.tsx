@@ -57,7 +57,13 @@ const FeaturesSection = () => {
             </div>)}
 
           {/* Medium cards */}
-          {features.slice(3).map((feature, index) => {})}
+          {features.slice(3).map((feature, index) => (
+            <div key={index} className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-solana-purple/50 transition-all duration-300">
+              <feature.icon className="w-6 h-6 text-solana-purple mb-3" />
+              <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground font-light">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>;
