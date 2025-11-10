@@ -13,9 +13,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-2 px-2">
             <img src={signifyLogo} alt="Signify.ai" className="w-8 h-8 object-contain" />
-            <span className="text-sm font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
-              Signify.ai
-            </span>
+            
           </div>
           
           {/* Divider */}
