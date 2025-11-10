@@ -10,9 +10,9 @@ const Navigation = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-solana-purple/10 via-solana-green/10 to-solana-purple/10 blur-xl rounded-full" />
         
         {/* Main navigation container */}
-        <div className="relative flex items-center gap-1 px-2 py-2 rounded-full border border-border/40 bg-background/80 backdrop-blur-2xl shadow-xl">
+        <div className="relative flex items-center justify-between gap-3 px-4 py-2 rounded-full border border-border/40 bg-background/80 backdrop-blur-2xl shadow-xl">
           {/* Logo */}
-          <div className="flex items-center gap-2 px-4">
+          <div className="flex items-center gap-2 px-2">
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-solana-purple to-solana-green">
               <span className="text-sm font-semibold">S</span>
             </div>
@@ -25,24 +25,24 @@ const Navigation = () => {
           <div className="h-8 w-px bg-border/40" />
           
           {/* Navigation links with icons */}
-          <div className="flex items-center gap-1 px-2">
+          <div className="flex items-center gap-2">
             <a 
               href="#features" 
-              className="p-3 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
+              className="p-2.5 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
               aria-label="Features"
             >
               <Star className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
             <a 
               href="#scenarios" 
-              className="p-3 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
+              className="p-2.5 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
               aria-label="Use Cases"
             >
               <Info className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
             <a 
               href="#security" 
-              className="p-3 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
+              className="p-2.5 text-muted-foreground hover:text-foreground transition-all duration-300 rounded-full hover:bg-accent/50 group"
               aria-label="Security"
             >
               <Shield className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -70,7 +70,7 @@ const Navigation = () => {
             
             <Button 
               size="sm" 
-              className="bg-gradient-to-r from-solana-purple to-solana-green hover:opacity-90 transition-all hover:scale-105 text-sm font-semibold px-5 h-9 rounded-full shadow-lg ml-1"
+              className="bg-gradient-to-r from-solana-purple to-solana-green hover:opacity-90 transition-all hover:scale-105 text-sm font-semibold px-5 h-9 rounded-full shadow-lg"
             >
               Apply Now
             </Button>
