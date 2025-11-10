@@ -37,7 +37,7 @@ const Navigation = () => {
 
           {/* Right side actions */}
           <div className="flex items-center gap-2 px-2">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-accent/50 transition-colors group" aria-label="GitHub">
+            <a href="https://github.com/dean-trencher/signify.id" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-accent/50 transition-colors group" aria-label="GitHub">
               <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
             </a>
             
