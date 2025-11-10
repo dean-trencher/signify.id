@@ -15,22 +15,22 @@ const CTASection = () => {
           </div>
 
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-white">
               Ready to Get Your Digital ID?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-base text-white/90 mb-6 max-w-2xl mx-auto font-light">
               Join thousands of users who trust Signify.ai for secure, blockchain-verified identity cards
             </p>
             
             <Button 
-              size="lg" 
-              className="bg-white text-solana-purple hover:bg-white/90 transition-all text-lg px-8 py-6 group"
+              size="default" 
+              className="bg-white text-solana-purple hover:bg-white/90 transition-all text-sm px-6 py-5 group"
             >
               Get Started Now
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <p className="mt-6 text-sm text-white/70">
+            <p className="mt-4 text-xs text-white/70 font-light">
               No credit card required • Setup in minutes • 30-day money-back guarantee
             </p>
           </div>

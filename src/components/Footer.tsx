@@ -8,33 +8,33 @@ const Footer = () => {
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-solana-purple to-solana-green">
                 <span className="text-xl font-bold">S</span>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
-                Signify.ai
-              </span>
+            <span className="text-lg font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
+              Signify.ai
+            </span>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-4 font-light">
               Blockchain-powered digital identity cards on the Solana network. 
               Secure, verifiable, and accessible worldwide.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Product</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
-              <li><a href="#scenarios" className="hover:text-foreground transition-colors">Use Cases</a></li>
-              <li><a href="#security" className="hover:text-foreground transition-colors">Security</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Pricing</a></li>
+            <h4 className="text-sm font-medium mb-3">Product</h4>
+            <ul className="space-y-1.5 text-muted-foreground">
+              <li><a href="#features" className="hover:text-foreground transition-colors text-xs font-light">Features</a></li>
+              <li><a href="#scenarios" className="hover:text-foreground transition-colors text-xs font-light">Use Cases</a></li>
+              <li><a href="#security" className="hover:text-foreground transition-colors text-xs font-light">Security</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors text-xs font-light">Pricing</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
+            <h4 className="text-sm font-medium mb-3">Company</h4>
+            <ul className="space-y-1.5 text-muted-foreground">
+              <li><a href="#" className="hover:text-foreground transition-colors text-xs font-light">About Us</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors text-xs font-light">Blog</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors text-xs font-light">Careers</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors text-xs font-light">Contact</a></li>
             </ul>
           </div>
         </div>

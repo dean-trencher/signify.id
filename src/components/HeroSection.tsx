@@ -26,7 +26,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl md:text-5xl font-semibold mb-4 leading-tight">
           <span className="bg-gradient-to-r from-solana-purple via-purple-400 to-solana-green bg-clip-text text-transparent">
             Blockchain Identity
           </span>
@@ -34,39 +34,39 @@ const HeroSection = () => {
           <span className="text-foreground">on Solana</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto font-light">
           Secure, verifiable digital identity cards powered by Solana blockchain. 
           Your credentials, always accessible, fully decentralized.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-gradient-to-r from-solana-purple to-solana-green hover:opacity-90 transition-opacity text-lg px-8 py-6">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <Button size="default" className="bg-gradient-to-r from-solana-purple to-solana-green hover:opacity-90 transition-opacity text-sm px-6 py-5">
             Get Your ID Card
           </Button>
-          <Button size="lg" variant="outline" className="border-border/50 hover:border-solana-purple/50 text-lg px-8 py-6">
+          <Button size="default" variant="outline" className="border-border/50 hover:border-solana-purple/50 text-sm px-6 py-5">
             Learn More
           </Button>
         </div>
 
         {/* Stats */}
-        <div className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+        <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
+            <div className="text-2xl font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
               50K+
             </div>
-            <div className="text-sm text-muted-foreground mt-2">Active Users</div>
+            <div className="text-xs text-muted-foreground mt-1">Active Users</div>
           </div>
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
+            <div className="text-2xl font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
               200+
             </div>
-            <div className="text-sm text-muted-foreground mt-2">Countries</div>
+            <div className="text-xs text-muted-foreground mt-1">Countries</div>
           </div>
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
+            <div className="text-2xl font-semibold bg-gradient-to-r from-solana-purple to-solana-green bg-clip-text text-transparent">
               99.9%
             </div>
-            <div className="text-sm text-muted-foreground mt-2">Uptime</div>
+            <div className="text-xs text-muted-foreground mt-1">Uptime</div>
           </div>
         </div>
       </div>

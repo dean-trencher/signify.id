@@ -48,8 +48,8 @@ const IDCard = ({ holderName, walletAddress, variant = "purple", delay = 0 }: ID
         </div>
 
         {/* Wallet Address */}
-        <div className="relative mb-4">
-          <p className="text-lg font-mono tracking-wider">
+        <div className="relative mb-3">
+          <p className="text-base font-mono tracking-wider">
             {walletAddress}
           </p>
         </div>
@@ -57,10 +57,10 @@ const IDCard = ({ holderName, walletAddress, variant = "purple", delay = 0 }: ID
         {/* Holder Info */}
         <div className="relative flex justify-between items-end">
           <div>
-            <p className="text-xs opacity-70 mb-1">Card Holder</p>
-            <p className="text-sm font-semibold">{holderName}</p>
+            <p className="text-[10px] opacity-70 mb-0.5 font-light">Card Holder</p>
+            <p className="text-xs font-medium">{holderName}</p>
           </div>
-          <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm" />
+          <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm" />
         </div>
 
         {/* Solana logo watermark */}

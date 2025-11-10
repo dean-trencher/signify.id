@@ -33,11 +33,11 @@ const UseCasesSection = () => {
       <div className="absolute inset-0 gradient-radial opacity-50" />
       
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-3">
             Application Scenarios
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto font-light">
             Transforming identity verification across industries
           </p>
         </div>
@@ -51,12 +51,12 @@ const UseCasesSection = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${useCase.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
               
               <div className="relative">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${useCase.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <useCase.icon className="w-8 h-8 text-white" />
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${useCase.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <useCase.icon className="w-6 h-6 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-semibold mb-3">{useCase.title}</h3>
-                <p className="text-muted-foreground text-lg">{useCase.description}</p>
+                <h3 className="text-lg font-medium mb-2">{useCase.title}</h3>
+                <p className="text-muted-foreground text-sm font-light">{useCase.description}</p>
               </div>
             </div>
           ))}
